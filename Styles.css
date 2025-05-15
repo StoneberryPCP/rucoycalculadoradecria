@@ -1,0 +1,137 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Título principal */
+#header {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+/* Descrição */
+#description {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Instruções */
+#instructions {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Divisores */
+#divider1,
+#divider2 {
+  height: 2px;
+  background: #fff;
+  margin: 20px 0;
+  opacity: 0.3;
+}
+
+/* Seções principais */
+#mainContent {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Inputs e labels */
+input[type="number"],
+input[type="checkbox"] {
+  margin: 6px 0;
+}
+
+input[type="number"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  width: 100px;
+  font-size: 1rem;
+}
+
+/* Botão Calcular */
+button {
+  background: #00e676;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00c853;
+}
+
+/* Resultados */
+#results {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#resultsText1,
+#resultsText2,
+#resultsText3,
+#resultsText4 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+#rt1_2 {
+  font-weight: bold;
+  display: block;
+  margin: 6px 0;
+}
+
+#rt1_3 {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Checkboxes e opções */
+label {
+  margin-left: 6px;
+}
+
+#advancedBoxes {
+  margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  #mainContent {
+    padding: 15px;
+  }
+
+  input[type="number"] {
+    width: 80px;
+  }
+}

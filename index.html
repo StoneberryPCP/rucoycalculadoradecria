@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PMQMDTBB');</script>
+  <!-- End Google Tag Manager -->
+  <title>Rucoy Training Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/rucoy_favicon.ico">
+  <script src="./index.js"></script>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMQMDTBB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1 id="header">Calculadora de Treino - Rucoy Online</h1>
+  
+  <div id="description">Insira nos campos a seguir as informações correspondentes saber em qual mob treinar skillando ou parado.</div>
+  
+  <div id="mainContent">
+  
+    <input type="checkbox" id="instToggle" onclick="instructions()">
+    <label for="instToggle">Ver Ajuda</label><br>
+    
+    <div id="instructions">
+      <p><b>Overview:</b><br>Esta calculadora indicará com precisão o melhor monstro para você treinar, a duração média do treinamento até a morte do monstro (lembre-se de que os monstros se cansam após 7 minutos e 30 segundos) e as estatísticas necessárias para avançar para o próximo monstro. Experimente diferentes combinações de armas e equipamentos de treinamento para encontrar o que funciona melhor.</p>
+      <p><b>"Explicação sobre<span class="notranslate"> Skillamento</span>"</b><br>Se esta caixa não estiver marcada, a calculadora mostrará os resultados do treinamento<span class="notranslate"> Skillando</span>. Marcar a caixa irá informar a calculadora que você deseja verificar qual mob treinar <span class="notranslate"> skillando</span>; Se você for mago não esqueça de marcar também a caixa de "Sou mago".</p>
+      <p><b>Explicação dos campos</b><br>"Nível Base" é o nível do seu personagem (fica ao lado do seu nome). "Level da Skill" Se trata do nível da sua Skill, sem considerar equipamentos. "Equipamentos Extras" refere-se ao anel/colar/armadura de aumento de atributos que você usará durante o treinamento, todos somados (valor negativo para void itens).<span class="notranslate"> "Dano da Arma" é a força da sua arma de treinamento, que pode ser encontrada lendo seu valor no inventário.</p>
+      <p><b>Explicação das opções avançadas:</b><br>"Eficiencia Desejada" permite que você escolha a eficiência do seu treinamento. Ao treinar Skillando, por por exemplo escolher 90% de eficiência garantirá que a calculadora mostre apenas monstros que você pode treinar a 3.240 tiques por hora ou mais; o valor máximo que você pode selecionar é 99%. "Habilitar Anel Crítico" indica à calculadora que você pretende usar um anel crítico durante o treinamento.</p>
+      <p><b>Limitações:</b><br>Infelizmente, esta calculadora não pode indicar se você é capaz ou não de tankar o monstro resultante. Portanto, é possível que a calculadora recomende um monstro forte demais para você.
+
+</p>
+    </div>
+    
+    <div id="divider1"></div>
+  
+    <input type="checkbox" id="enablePt" onclick="enablePtrain()">
+    <label for="enablePt">Calcular treino<span class="notranslate"> Skillando</span></label>
+
+    <p id="mageToggle">
+      <input type="checkbox" id="magePt">
+      <label for="magePt"><span class="notranslate">Se você for mago, marque esta </span>Caixa</label>
+    </p>
+
+    <p>Nível do personagem: <input type="number" id="box1" value="" ></p>
+    <p>Nível da sua Skill: <input type="number" id="box2" value="" ></p>
+    <p>Equipamentos Extras (Anel, Colar, Item da Classe): <input type="number" id="box3" value="0"></p>
+    <p><span class="notranslate">Dano </span>da sua arma: <input type="number" id="box4" value="" ></p>
+
+    <input type="checkbox" id="advancedToggle" onclick="advancedOptions()">
+    <label for="advancedToggle">Opções Avançadas</label>
+
+    <div id="advancedBoxes">
+      <p>Eficiencia Desejada: <input type="number" id="box5" value="90">%+</p>
+      <input type="checkbox" id="critRing">
+      <label for="critRing">Habilitar anel de crítico</label>
+    </div>
+    
+  </div>
+
+  <p><button type="button" onclick="calculation()">Calcular</button></p>
+
+  <div id="results">
+    <div id="resultsText1">
+      <span id="rt1_1">[Seus resultados aparecerão aqui]</span>
+      <span id="rt1_2"></span>
+      <span id="rt1_3"></span>
+    </div>
+    <div id="resultsText2"></div>
+    <div id="divider2"></div>
+    <div id="resultsText3"></div>
+    <div id="resultsText4"></div>
+  </div>
+
+</body>
+
+</html>
